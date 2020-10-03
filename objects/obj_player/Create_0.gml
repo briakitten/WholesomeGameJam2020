@@ -26,3 +26,8 @@ frame_size = 24; // size of each sprite frame
 questionmark_alpha = 0;
 questionmark_timer = new Frame_Timer(15);
 
+if (game.transitioning) {
+	bUnpossessing = true;
+	idle = true;
+	check_input = false;
+}

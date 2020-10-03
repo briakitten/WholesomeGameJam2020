@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_vent",
-    "path": "sprites/spr_vent/spr_vent.yy",
+    "name": "spr_plushie",
+    "path": "sprites/spr_plushie/spr_plushie.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,9 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_vent","path":"objects/obj_vent/obj_vent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -30,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_vent",
+  "name": "obj_plushie",
   "tags": [],
   "resourceType": "GMObject",
 }

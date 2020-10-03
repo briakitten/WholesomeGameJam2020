@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_vent",
-    "path": "sprites/spr_vent/spr_vent.yy",
+    "name": "spr_vent_bedroom",
+    "path": "sprites/spr_vent_bedroom/spr_vent_bedroom.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_vent",
+    "path": "objects/obj_vent/obj_vent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,7 +24,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_vent","path":"objects/obj_vent/obj_vent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_vent_bedroom","path":"objects/obj_vent_bedroom/obj_vent_bedroom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +33,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_vent",
+  "name": "obj_vent_bedroom",
   "tags": [],
   "resourceType": "GMObject",
 }

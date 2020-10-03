@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"02dac37b-0bc0-4a33-a146-1f2612a155c0","path":"sprites/spr_vent/spr_vent.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"02dac37b-0bc0-4a33-a146-1f2612a155c0","path":"sprites/spr_vent/spr_vent.yy",},"LayerId":{"name":"7f1cfc8b-514f-4241-b8fe-5f04714bf82c","path":"sprites/spr_vent/spr_vent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_vent","path":"sprites/spr_vent/spr_vent.yy",},"resourceVersion":"1.0","name":"02dac37b-0bc0-4a33-a146-1f2612a155c0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d2872b80-eb38-4399-8d96-329539ae0c9e","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d2872b80-eb38-4399-8d96-329539ae0c9e","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},"LayerId":{"name":"716b7d81-3829-445b-8664-75adef9e8219","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_vent_bedroom","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},"resourceVersion":"1.0","name":"d2872b80-eb38-4399-8d96-329539ae0c9e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_vent","path":"sprites/spr_vent/spr_vent.yy",},
+    "spriteId": {"name":"spr_vent_bedroom","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"bc47868f-0132-43a9-9b19-86933bc77f2e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"02dac37b-0bc0-4a33-a146-1f2612a155c0","path":"sprites/spr_vent/spr_vent.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"36df642a-4859-4094-944a-7d08bb56abfb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2872b80-eb38-4399-8d96-329539ae0c9e","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_vent","path":"sprites/spr_vent/spr_vent.yy",},
+    "parent": {"name":"spr_vent_bedroom","path":"sprites/spr_vent_bedroom/spr_vent_bedroom.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_vent",
+    "name": "spr_vent_bedroom",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7f1cfc8b-514f-4241-b8fe-5f04714bf82c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"716b7d81-3829-445b-8664-75adef9e8219","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_vent",
+  "name": "spr_vent_bedroom",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -24,23 +24,37 @@ if (check_input) {
 	// CONFIGURE PLAYER STATES BASED ON INPUT HERE
 }
 
-// ADD PLAYER STATE LOGIC HERE
-var inst = instance_place(x, y, obj_wisp);
-if (inst != noone) {
+// Instance processing
+var inst_wisp = instance_place(x, y, obj_wisp);
+if (inst_wisp != noone) {
 	game.interact_prompt = true;
 	if (button_select) {
-		instance_destroy(inst);
+		instance_destroy(inst_wisp);
 		game.wisp_count++;
 		game.interact_prompt = false;
 	}
 }
+
+var inst_vent = instance_place(x, y, obj_vent);
+if (inst_vent != noone) {
+	game.interact_prompt = true;
+	if (button_select) {
+		game.interact_prompt = false;
+		bPossessing = true;
+		check_input = false;
+		idle = true;
+		
+		game.transitioning = true;
+	}
+}
 	
-inst = instance_place(x, y, obj_box);
-if (inst != noone) {
+var inst_box = instance_place(x, y, obj_box);
+if (inst_box != noone) {
 	if (button_select) {	
 		bPossessing = true;
 		game.interact_prompt = false;
 		check_input = false;
+		idle = true;
 		
 	}
 	game.interact_prompt = true;
@@ -63,11 +77,17 @@ if(bPossessing)
 	if (Framecounter >= PossessingFrames)
 	{
 		bPossessing = false;
-		Framecounter = 0;	
-		instance_destroy(inst);
-		instance_deactivate_object(self);
-		instance_create_layer(inst.x, inst.y, "Instances", obj_box_possessed);
-		bUnpossessing = true;
+		
+		if (game.transitioning) { room_goto(inst_vent.target_room); }
+		else {
+		
+			Framecounter = 0;	
+			instance_destroy(inst_box);
+			instance_deactivate_object(self);
+			instance_create_layer(inst_box.x, inst_box.y, "Instances", obj_box_possessed);
+			bUnpossessing = true;
+		
+		}
 	}
 }
 
@@ -79,6 +99,8 @@ if(bUnpossessing)
 		bUnpossessing = false;
 		check_input = true;
 		Framecounter = 0;	
+		
+		if (game.transitioning) game.transitioning = false;
 		
 	}
 }

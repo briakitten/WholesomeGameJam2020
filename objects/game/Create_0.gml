@@ -10,14 +10,20 @@ enum Dir8 {
 	DOWN_RIGHT
 }
 
+// room lighting up
 black_alpha = 1;
 black_alpha_timer = new Frame_Timer(60);
 black_alpha_top = 1;
 
+// vent transition variables
+transitioning = false;
+
+// wisps
 wisp_count = 0;
 wisp_count_previous = 0;
 wisp_count_threshold = 3;
 
+// etc
 interact_prompt = false;
 
 player_x = 0;

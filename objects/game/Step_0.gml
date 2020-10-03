@@ -1,5 +1,6 @@
 /// @description 
 
+// room lighting up and wisp code
 if (wisp_count_previous != wisp_count) {
 	if (black_alpha_timer.update()) {
 		wisp_count_previous = wisp_count;

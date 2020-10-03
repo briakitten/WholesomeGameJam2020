@@ -1,12 +1,8 @@
 /// @description 
 
-if (frame_timer_flip.update()) {
-	x_scale *= -1;
-	
-	if (x_scale == 1) {
-		x_offset = 0;
-	} else {
-		x_offset = 24;
-	}
+if (frame_timer.update()) {
+	frame = 0;
+} else {
+	frame = frame_timer.get_frame(4);
 }
 
