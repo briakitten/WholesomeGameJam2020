@@ -1,5 +1,11 @@
 /// @description 
 
+bPossessing = false;
+bUnpossessing = false;
+PossessingFrames = 11;
+UnpossessingFrames = 12;
+Framecounter = 0;
+Drawcounter = 0;
 
 check_input = true;
 

@@ -24,7 +24,31 @@ if (dir8 == Dir8.UP_RIGHT || dir8 == Dir8.RIGHT || dir8 == Dir8.DOWN_RIGHT) {
 	was_left = false;
 }
 
-draw_sprite_part_ext(spr_player, -1, x_frame * frame_size, y_frame * frame_size, frame_size, frame_size,
-	x + x_offset, y + y_offset, x_scale, y_scale, c_white, 1);
+if (not bPossessing & not bUnpossessing)
+{
+	draw_sprite_part_ext(spr_player, -1, x_frame * frame_size, y_frame * frame_size, frame_size, frame_size,
+		x + x_offset, y + y_offset, x_scale, y_scale, c_white, 1);
 	
-draw_sprite_ext(spr_questionmark, -1, x + 4, y - 24, 1, 1, 0, c_white, questionmark_alpha);
+	draw_sprite_ext(spr_questionmark, -1, x + 4, y - 24, 1, 1, 0, c_white, questionmark_alpha);
+}
+else if (bPossessing)
+{
+	
+	draw_sprite(Ghost_PossessionAnimation, Framecounter, x, y)
+	Drawcounter +=1;
+	if (Drawcounter >=4)
+	{
+		Framecounter +=1;
+		Drawcounter = 0;
+	}
+}
+else if (bUnpossessing)
+{
+	draw_sprite(Ghost_UnpossessionAnimation, Framecounter, x, y)
+	Drawcounter +=1;
+	if (Drawcounter >=4)
+	{
+		Framecounter +=1;
+		Drawcounter = 0;
+	}
+}
