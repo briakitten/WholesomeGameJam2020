@@ -4,7 +4,7 @@
     "path": "sprites/spr_collision_player/spr_collision_player.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

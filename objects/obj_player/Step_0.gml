@@ -1,8 +1,12 @@
 /// @description 
+
+game.interact_prompt = false;
+
 var button_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 var button_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 var button_up = keyboard_check(ord("W")) || keyboard_check(vk_up);
 var button_down = keyboard_check(ord("S")) || keyboard_check(vk_down);
+var button_select = keyboard_check(vk_space) || keyboard_check(vk_enter);
 var hInput = button_right - button_left;
 var vInput = button_down - button_up;
 
@@ -19,7 +23,37 @@ if (check_input) {
 }
 
 // ADD PLAYER STATE LOGIC HERE
-// ...
+var inst = instance_place(x, y, obj_wisp);
+if (inst != noone) {
+	game.interact_prompt = true;
+	if (button_select) {
+		instance_destroy(inst);
+		game.wisp_count++;
+		game.interact_prompt = false;
+	}
+}
+	
+inst = instance_place(x, y, obj_box);
+if (inst != noone) {
+	game.interact_prompt = true;
+	if (button_select) {
+		instance_destroy(inst);
+		game.wisp_count++;
+		game.interact_prompt = false;
+	}
+}
+	
+// interact prompt alpha
+if (game.interact_prompt && questionmark_alpha < 1) {
+	if (questionmark_timer.update()) {
+		questionmark_alpha = 1;
+	}
+	questionmark_alpha = questionmark_timer.index / questionmark_timer.threshold;
+} else if (!game.interact_prompt) {
+	questionmark_alpha = 0;
+	questionmark_timer.index = 0;
+}
+
 
 #region MOVEMENT
 if (!idle) {
@@ -29,3 +63,6 @@ if (!idle) {
 
 // ADD ETC INSTANCE COLLISIONS HERE
 // ...
+
+game.player_x = x;
+game.player_y = y;
