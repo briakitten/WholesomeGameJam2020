@@ -1,4 +1,14 @@
 /// @description create game functionalities
+enum Dir8 {
+	RIGHT,
+	UP_RIGHT,
+	UP,
+	UP_LEFT,
+	LEFT,
+	DOWN_LEFT,
+	DOWN,
+	DOWN_RIGHT
+}
 
 black_alpha = 1;
 black_alpha_timer = new Frame_Timer(60);

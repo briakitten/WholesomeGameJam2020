@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_box_possessed",
-    "path": "sprites/spr_box_possessed/spr_box_possessed.yy",
+    "name": "spr_box_possessed_collisionmask",
+    "path": "sprites/spr_box_possessed_collisionmask/spr_box_possessed_collisionmask.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,6 +22,8 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_box_possessed","path":"objects/obj_box_possessed/obj_box_possessed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":73,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_box_possessed","path":"objects/obj_box_possessed/obj_box_possessed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_box_possessed","path":"objects/obj_box_possessed/obj_box_possessed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

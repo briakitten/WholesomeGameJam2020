@@ -1,14 +1,5 @@
 /// @description 
-enum Dir8 {
-	RIGHT,
-	UP_RIGHT,
-	UP,
-	UP_LEFT,
-	LEFT,
-	DOWN_LEFT,
-	DOWN,
-	DOWN_RIGHT
-}
+
 
 check_input = true;
 
