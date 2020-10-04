@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_basementdeco","path":"sprites/spr_basementdeco/spr_basementdeco.yy",},"order":22,},
     {"id":{"name":"obj_button_watcher","path":"objects/obj_button_watcher/obj_button_watcher.yy",},"order":9,},
     {"id":{"name":"tilesheet_bedroom","path":"tilesets/tilesheet_bedroom/tilesheet_bedroom.yy",},"order":2,},
     {"id":{"name":"thx","path":"sprites/thx/thx.yy",},"order":21,},
@@ -46,6 +47,7 @@
     {"id":{"name":"msc_smol_ghostly_kitty_memories","path":"sounds/msc_smol_ghostly_kitty_memories/msc_smol_ghostly_kitty_memories.yy",},"order":1,},
     {"id":{"name":"spr_box_possessed_collisionmask","path":"sprites/spr_box_possessed_collisionmask/spr_box_possessed_collisionmask.yy",},"order":14,},
     {"id":{"name":"button1","path":"sprites/button1/button1.yy",},"order":15,},
+    {"id":{"name":"tilesheet_basementdeco","path":"tilesets/tilesheet_basementdeco/tilesheet_basementdeco.yy",},"order":3,},
     {"id":{"name":"obj_end_events","path":"objects/obj_end_events/obj_end_events.yy",},"order":12,},
     {"id":{"name":"tilesheet_basement","path":"tilesets/tilesheet_basement/tilesheet_basement.yy",},"order":1,},
     {"id":{"name":"spr_tilesheet_basement","path":"sprites/spr_tilesheet_basement/spr_tilesheet_basement.yy",},"order":6,},
