@@ -41,6 +41,7 @@ var inst_vent = instance_place(x, y, obj_vent);
 if (inst_vent != noone) {
 	game.interact_prompt = true;
 	if (button_select) {
+		// use bPossessing to handle it, later conditionals checking for if transitioning
 		game.interact_prompt = false;
 		bPossessing = true;
 		check_input = false;
@@ -99,12 +100,13 @@ if(bPossessing)
 	{
 		bPossessing = false;
 		
-		if (game.game_done) {
+		if (game.game_done) { // check if plushie is possessed
 			room_goto(rm_end);
 			instance_deactivate_object(self);
 		} else {
-			if (game.transitioning) { room_goto(inst_vent.target_room); }
+			if (game.transitioning) { room_goto(inst_vent.target_room); } // if vent possessed
 			else if (inst_box != noone) {
+				// if box possessed
 				Framecounter = 0;	
 				inst_box.deactivate();
 				instance_deactivate_object(self);
