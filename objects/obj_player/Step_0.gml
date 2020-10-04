@@ -33,6 +33,28 @@ if (inst_wisp != noone) {
 			inst_wisp.collect();
 			game.wisp_count++;
 			game.interact_prompt = false;
+			
+			if (game.wisp_count < 3)
+			{
+				var i = random(3);
+				
+				if (i <= 1)
+				{
+					audio_play_sound(sfx_collecting_whisp_1,2,false);
+				}
+				else if (i > 1 && i <= 2)
+				{
+					audio_play_sound(sfx_collecting_whisp_2,2,false);
+				}
+				else if (i > 2)
+				{
+					audio_play_sound(sfx_collecting_whisp_3,2,false);
+				}
+			}
+			else if (game.wisp_count = 3)
+			{
+				audio_play_sound(sfx_collecting_whisp_all,2,false);	
+			}
 		}
 	}
 }
@@ -46,7 +68,7 @@ if (inst_vent != noone) {
 		bPossessing = true;
 		check_input = false;
 		idle = true;
-		
+		audio_play_sound(sfx_entering_vent,2,false);
 		game.transitioning = true;
 		game.transition_target_x = inst_vent.target_x;
 		game.transition_target_y = inst_vent.target_y;
@@ -96,9 +118,15 @@ if (game.interact_prompt && questionmark_alpha < 1) {
 // possession animation
 if(bPossessing)
 {
+	if (not bSoundPlaying)
+	{
+		bSoundPlaying = true;
+		audio_play_sound(sfx_possessing,2,false);
+	}
 	if (Framecounter >= PossessingFrames)
 	{
 		bPossessing = false;
+		bSoundPlaying = false;
 		
 		if (game.game_done) { // check if plushie is possessed
 			room_goto(rm_end);
@@ -121,10 +149,15 @@ if(bPossessing)
 
 if(bUnpossessing)
 {
-	
+	if (not bSoundPlaying & Framecounter = 1)
+	{
+		bSoundPlaying = true;
+		audio_play_sound(sfx_unpossessing,2,false);
+	}
 	if (Framecounter >= UnpossessingFrames)
 	{
 		bUnpossessing = false;
+		bSoundPlaying = false;
 		check_input = true;
 		Framecounter = 0;	
 		

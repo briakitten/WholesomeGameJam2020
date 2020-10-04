@@ -11,6 +11,10 @@ with (obj_button) {
 if (buttons_on_count == 3) {
 	all_buttons_on = true;
 }
+else 
+{
+	all_buttons_on = false;	
+}
 
 if (room == rm_basement && all_buttons_on) {
 	layer_set_visible("RavineBridge", true);
