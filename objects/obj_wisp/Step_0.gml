@@ -5,4 +5,3 @@ if (frame_timer.update()) {
 } else {
 	frame = frame_timer.get_frame(4);
 }
-

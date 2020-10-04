@@ -8,3 +8,10 @@ frame = 0;
 
 width = 24;
 height = 24;
+
+collected = false;
+
+collect = function() {
+	collected = true;
+	visible = false;
+}

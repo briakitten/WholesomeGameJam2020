@@ -17,11 +17,13 @@ black_alpha_top = 1;
 
 // vent transition variables
 transitioning = false;
+transition_target_x = 0;
+transition_target_y = 0;
 
 // wisps
 wisp_count = 0;
 wisp_count_previous = 0;
-wisp_count_threshold = 3;
+wisp_count_threshold = 3; // when adding wisps to map, change wisp total here
 
 // etc
 interact_prompt = false;
@@ -30,6 +32,4 @@ player_x = 0;
 player_y = 0;
 
 game_playing = false;
-room_goto(rm_basement);
-
-game_playing = true;
+game_done = false;

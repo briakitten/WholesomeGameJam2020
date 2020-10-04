@@ -19,8 +19,63 @@ if (check_input) {
 	
 	if (button_select) {
 		instance_activate_object(obj_player);
-		instance_create_layer(x, y, "Instances", obj_box);
+		box.x = x;
+		box.y = y;
+		box.activate();
 		instance_destroy(self);
+		
+		#region place player in new spot
+		var player_placed = false;
+		obj_player.x = x - 24;
+		obj_player.y = y;
+		with (obj_player) {
+			var inst = instance_place(x, y, obj_collision)
+			if (inst == noone) {
+				player_placed = true; // player successfully placed
+			}
+		}
+		
+		// try placing in a different spot
+		if (!player_placed) {
+			obj_player.x = x + 24;
+			obj_player.y = y;
+			with (obj_player) {
+				var inst = instance_place(x, y, obj_collision)
+				if (inst == noone) {
+					player_placed = true; // player successfully placed
+				}
+			}
+		}
+		
+		// try placing in a different spot
+		if (!player_placed) {
+			obj_player.x = x;
+			obj_player.y = y + 24;
+			with (obj_player) {
+				var inst = instance_place(x, y, obj_collision)
+				if (inst == noone) {
+					player_placed = true; // player successfully placed
+				}
+			}
+		}
+		
+		// try placing in a different spot
+		if (!player_placed) {
+			obj_player.x = x;
+			obj_player.y = y - 24;
+			with (obj_player) {
+				var inst = instance_place(x, y, obj_collision)
+				if (inst == noone) {
+					player_placed = true; // player successfully placed
+				}
+			}
+		}
+		#endregion
+	}
+} else {
+	if (start_possess_timer.update()) {
+		check_input = true;
+		spr = spr_box_possessed_moving;
 	}
 }
 

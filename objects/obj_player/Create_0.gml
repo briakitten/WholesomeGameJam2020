@@ -30,4 +30,7 @@ if (game.transitioning) {
 	bUnpossessing = true;
 	idle = true;
 	check_input = false;
+	
+	x = game.transition_target_x;
+	y = game.transition_target_y;
 }

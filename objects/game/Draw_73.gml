@@ -17,6 +17,8 @@ if (game_playing) {
 	}
 
 	// draw wisp count
-	draw_set_font(fnt_creature);
-	draw_text_transformed(player_x - 120, player_y - 90, string(wisp_count) + " / " + string(wisp_count_threshold), 1, 1, 0);
+	if (room == rm_basement || room == rm_bedroom) {
+		draw_set_font(fnt_creature);
+		draw_text_transformed(player_x - 120, player_y - 90, string(wisp_count) + " / " + string(wisp_count_threshold), 1, 1, 0);
+	}
 }
