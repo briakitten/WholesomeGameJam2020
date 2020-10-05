@@ -19,4 +19,9 @@ else
 if (room == rm_basement && all_buttons_on) {
 	layer_set_visible("RavineBridge", true);
 	instance_destroy(inst_collision2);
+	
+	if (!sound_happened) {
+		sound_happened = true;
+		audio_play_sound(sfx_sk, 100, false);
+	}
 }

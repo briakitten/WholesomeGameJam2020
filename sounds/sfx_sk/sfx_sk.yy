@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.39,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "msc_basement.mp3",
-  "duration": 74.06215,
+  "soundFile": "sfx_sk.ogg",
+  "duration": 0.082619,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "msc_basement",
+  "name": "sfx_sk",
   "tags": [],
   "resourceType": "GMSound",
 }

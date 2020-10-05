@@ -31,5 +31,7 @@ interact_prompt = false;
 player_x = 0;
 player_y = 0;
 
+color_lightgreen = make_color_rgb(221, 247, 235);
+
 game_playing = false;
 game_done = false;

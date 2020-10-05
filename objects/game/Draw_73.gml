@@ -19,6 +19,7 @@ if (game_playing) {
 	// draw wisp count
 	if (room == rm_basement || room == rm_bedroom) {
 		draw_set_font(fnt_creature);
+		draw_set_color(game.color_lightgreen);
 		draw_text_transformed(player_x - 120, player_y - 90, string(wisp_count) + " / " + string(wisp_count_threshold), 1, 1, 0);
 	}
 }
